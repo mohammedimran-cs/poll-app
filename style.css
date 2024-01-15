@@ -180,4 +180,9 @@ form p {
         height: 50px;
         width: 50px;
     }
+
+     .show-result{
+        width: 80%;
+    }
+    
 }

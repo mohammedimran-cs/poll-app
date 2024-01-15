@@ -1,0 +1,103 @@
+<!-- HTML5 doctype declaration -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External stylesheet links -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Title of the web page -->
+    <title>Poll</title>
+</head>
+
+<body>
+    <!-- Main content of the page -->
+    <main>
+        <!-- Section for displaying profiles (Ronaldo vs Messi) -->
+        <div id="profile">
+            <!-- Individual profile container for Ronaldo -->
+            <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTaOkAC3aKKbUjhxesTuyNwc-rcksin_gfOw&usqp=CAU">
+                <h1 style="font-size: 20px; text-align: center;">Ronaldo</h1>
+            </div>
+            <!-- Heading indicating the versus comparison -->
+            <h1>VS</h1>
+            <!-- Individual profile container for Messi -->
+            <div class="col">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpbkjR11dMG7VgxklgNHyaMzX8lI4TN2dQgA&usqp=CAU">
+                <h1 style="font-size: 20px; text-align: center;">Messi</h1>
+            </div>
+        </div>
+
+        <!-- Form for user input -->
+        <form>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="country" placeholder="Country">
+            <input type="email" id="email" placeholder="Email Address">
+
+            <!-- Prompt for selecting a favorite -->
+            <p>Choose your favorite:</p>
+            <div id="favorite">
+                <!-- Radio button for Messi -->
+                <div>
+                    <input type="radio" id="messi" name="favorite" value="messi">
+                    <label for="messi">Messi</label>
+                </div>
+                <!-- Radio button for Ronaldo -->
+                <div>
+                    <input type="radio" id="ronaldo" name="favorite" value="ronaldo">
+                    <label for="ronaldo">Ronaldo</label>
+                </div>
+            </div>
+            <!-- Submit button for the form -->
+            <button type="submit">Submit</button>
+        </form>
+
+    </main>
+
+    <!-- Section for displaying the poll results -->
+    <div class="show-result">
+        <!-- Outer container for the poll results -->
+        <div class="outer-div">
+            <!-- Heading for the poll question -->
+            <h1>The GOAT is ?</h1>
+            <!-- Inner container for each option (Messi and Ronaldo) -->
+            <div class="inner-div">
+                <!-- Container for Messi's percentage and name -->
+                <div class="percent-name">
+                    <h4 id="messi-percent">50%</h4>
+                    <h2>Messi</h2>
+                </div>
+                <!-- Container for the progress bar and tick icon for Messi -->
+                <div class="show-bar">
+                    <div class="messi-tick"><i class="fa-solid fa-circle-check"></i></div>
+                    <progress class="myProgress" id="myProgressMessi" value=50 max="100"></progress>
+                </div>
+            </div>
+            <!-- Inner container for Ronaldo's percentage and name -->
+            <div class="inner-div">
+                <div class="percent-name">
+                    <h4 id="ronaldo-percent">50%</h4>
+                    <h2>Ronaldo</h2>
+                </div>
+                <!-- Container for the progress bar and tick icon for Ronaldo -->
+                <div class="show-bar">
+                    <div class="ronaldo-tick"><i class="fa-solid fa-circle-check"></i></div>
+                    <progress class="myProgress" id="myProgressRonaldo" value=10 max="100"></progress>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript libraries (jQuery) and custom script -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
